@@ -8,7 +8,6 @@ request.onupgradeneeded = function (event) {
     db.createObjectStore('new_transaction', { autoIncrement: true });
 };
 
-// upon a successful
 request.onsuccess = function (event) {
     db = event.target.result;
     if (navigator.onLine) {
