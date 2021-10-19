@@ -21,7 +21,7 @@ Deployed to Heroku
 ## Languages
 HTML5, CSS, jQuery, Express, MongoDB, Mongoose, IndexedDB, Bootstrap
 ## Installations
-  You will need to install  NPM i install, npm i express, and npm i mongoose.
+  You will need to install  npm i install, npm i express, and npm i mongoose.
 
  ## Contributions
   Denise Tuominen
