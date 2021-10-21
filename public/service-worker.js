@@ -28,6 +28,20 @@ self.addEventListener('install', function (e) {
     )
 })
 
+self.addEventListener('fetch', function (e) {
+    console.log(' check for the file or data in the cache');
+    e.respondWith(
+        fetch(e.request)
+        .catch(() => {
+            return cashes.open(version_01)
+            .then((cache) => {
+                return cache.match(e.request)
+            })
+        })
+    )
+})
+
+
 self.addEventListener('activate', function (e) {
     e.waitUntil(
         caches.keys()
@@ -41,18 +55,6 @@ self.addEventListener('activate', function (e) {
         })
         .then(() => self.clientInformation.claim() )
     )
-});
-
-self.addEventListener('fetch', function (e) {
-    console.log('fetch request : ' + e.request.url);
-    e.respondWith(
-        fetch(e.request)
-        .catch(() => {
-            return cashes.open(version_01)
-            .then((cache) => {
-                return cache.match(e.request)
-            })
-        })
-    )
 })
+
 
