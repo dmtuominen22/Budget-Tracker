@@ -1,4 +1,4 @@
-const APP_PREFIX = 'BudgetTracker-';
+const APP_PREFIX = 'budget-tracker';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
@@ -26,6 +26,7 @@ self.addEventListener('install', function (e) {
             return cache.addAll(FILES_TO_CACHE)
         })
     )
+self.clients.claim();
 });
 
 //activate
