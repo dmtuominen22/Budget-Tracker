@@ -11,6 +11,8 @@
 ## Description
     Having offline functionality is paramount to the success of an application that handles users’ financial information.  You will need to have the ability to enter deposits and enter expenses offline.  Offline entries should be added to the tracker when the application is brought back online.
     
+    https://user-images.githubusercontent.com/84994258/139605244-6bc584ff-54d6-4ef8-913c-33418932bb4a.png
+    
 ## GitHub
 https://github.com/dmtuominen22/Budget-Tracker
 
